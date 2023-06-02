@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: auto;
+    width: 100%;
     display: flex;
     align-items: center;
 
@@ -24,7 +24,6 @@ export const Container = styled.div`
         &:placeholder {
             color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
-
     }
 
     > svg {
