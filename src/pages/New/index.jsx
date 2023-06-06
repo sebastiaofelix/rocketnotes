@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
 import { Container, Form } from './styles';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Inputs';
 import { TextArea } from '../../components/TextArea';
 import { NoteItem } from '../../components/NoteItem';
 import { Section } from '../../components/Section';
+import { Button } from '../../components/Button';
+
 
 
 export function New(){
@@ -15,7 +18,7 @@ export function New(){
         <Form>
           <header>
             <h1>Criar nota</h1>
-            <a href="/">voltar</a>
+            <Link to="/">voltar</Link>
           </header>
           
           <Input placeholder="Título"/>          
@@ -26,6 +29,14 @@ export function New(){
             <NoteItem isNew placeholder="Novo link"/>
           </Section>
 
+          <Section title="Marcadores">
+            <div className="tags">
+              <NoteItem value="react"/>
+              <NoteItem isNew placeholder="Nova tag"/>
+            </div>
+          </Section> 
+
+          <Button title="Salar"/>
         </Form>
       </main>
     </Container>
